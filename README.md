@@ -1,2 +1,2 @@
-# C-
+# C++
 DSA course playlist
