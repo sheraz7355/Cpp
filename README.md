@@ -1,2 +1,2 @@
 # C++
-DSA course playlist
+DSA concepts
