@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [ $# -ge 1 ]; then
+  file="$1"
+else
+  shopt -s nullglob
+  files=( *.cpp )
+  if [ ${#files[@]} -eq 1 ]; then
+    file="${files[0]}"
+  else
+    echo "Usage: ./compile <file.cpp>  (or run in directory with exactly one .cpp file)"
+    echo "Found ${#files[@]} .cpp files: ${files[*]}"
+    exit 1
+  fi
+fi
+
+if [ ! -f "$file" ]; then
+  echo "File not found: $file"
+  exit 1
+fi
+
+out="$(basename "$file" .cpp)"
+g++ "$file" -o "$out"
+echo "Compiled $file -> $out"
