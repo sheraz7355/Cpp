@@ -10,7 +10,7 @@ void squareNumbers(int n);
 
 int main(){
 
-    int i,j,k;
+    int i;
     cout<<"Enter the size of pattern :"<<endl;
     cin>>i;
     squareNumbers(i);
