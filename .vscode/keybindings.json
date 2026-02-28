@@ -1,0 +1,7 @@
+[
+  {
+    "key": "\\",
+    "command": "editor.action.inlineSuggest.trigger",
+    "when": "editorTextFocus && !suggestWidgetVisible"
+  }
+]
